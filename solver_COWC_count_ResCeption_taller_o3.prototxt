@@ -1,0 +1,63 @@
+# ================================================================================================
+# 
+# Cars Overhead With Context
+#
+# http://gdo-datasci.ucllnl.org/cowc/
+#
+# T. Nathan Mundhenk, Goran Konjevod, Wesam A. Sakla, Kofi Boakye 
+#
+# Lawrence Livermore National Laboratory
+# Global Security Directorate
+#
+# February 2016
+#
+# ================================================================================================
+#
+#    Copyright (C) 2016 Lawrence Livermore National Security
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# ================================================================================================
+#
+#   This work performed under the auspices of the U.S. Department of Energy by Lawrence Livermore
+#   National Laboratory under Contract DE-AC52-07NA27344.
+#
+#   LLNL-MI-699521
+#
+# ================================================================================================
+
+
+net: "train_val_COWC_count_ResCeption_taller_o3.prototxt"
+# 81161
+test_iter: 8116
+test_interval: 5000
+test_initialization: false
+
+display: 20
+average_loss: 40
+
+base_lr: 0.01
+lr_policy: "poly"
+power: 0.5
+max_iter: 365000
+momentum: 0.9
+weight_decay: 0.0002
+
+snapshot: 5000
+snapshot_prefix: "train_val_COWC_count_ResCeption_taller_o3"
+solver_mode: GPU
+
+device_id: 0 
+
+#random_seed: 34234562302122                 
